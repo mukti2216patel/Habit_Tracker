@@ -1,0 +1,25 @@
+{
+  "name": "habit_tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukti2216patel/Habit_Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukti2216patel/Habit_Tracker/issues"
+  },
+  "homepage": "https://github.com/mukti2216patel/Habit_Tracker#readme",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.0"
+  }
+}
