@@ -427,7 +427,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.border-2, .border-4 {
+.border-2, .border-4, .border {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
@@ -476,6 +476,50 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .left-\[-8px\] {
   left: -8px;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+.left-\[-7px\] {
+  left: -7px;
+}
+
+.left-\[-6\.px\] {
+  left: -6.px;
+}
+
+.left-\[-6\.5px\] {
+  left: -6.5px;
+}
+
+.left-\[-6px\] {
+  left: -6px;
+}
+
+.left-\[-5px\] {
+  left: -5px;
+}
+
+.left-\[-7\.2px\] {
+  left: -7.2px;
+}
+
+.left-\[-7\.5px\] {
+  left: -7.5px;
+}
+
+.left-\[-7\.px\] {
+  left: -7.px;
+}
+
+.left-\[-7\.7px\] {
+  left: -7.7px;
+}
+
+.left-\[-7\.8px\] {
+  left: -7.8px;
 }
 
 .z-50 {
@@ -535,6 +579,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1500px;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-\[0px\] {
+  height: 0px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -589,6 +641,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-4 {
   width: 1rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .max-w-lg {
@@ -681,6 +741,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-4 {
   border-width: 4px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-white {
