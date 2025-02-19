@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Empire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'Mona-sans';
+            src: url('/mona-sans-condensed-regular_freefontdownload_org/mona-sans-condensed-regular.ttf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'roobert';
+            src: url('/Roobert-Font/RoobertMonoTRIAL-Medium-BF67243fd28915a.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'FounderLight';
+            src: url('/Founders_Grotesk/Founders_Grotesk/FoundersGrotesk-Light.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FounderMedium';
+            src: url('/Founders_Grotesk/Founders_Grotesk/FoundersGrotesk-Medium.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        #weltext {
+            font-family: 'Mona-sans';
+            font-size: 66px;
+            line-height: 66px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        #weltext1 {
+            font-family: 'Mona-sans';
+            font-size: 66px;
+            line-height: 66px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .kt1, .kt2, .kt3 {
+            font-family: 'roobert';
+            border: 3px solid #D4AF37;  
+            background-color: #f2fcf1;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="welcome" class="bg-[#01172D] text-black flex flex-col justify-center items-center w-full h-screen relative">
+        <div id="blackbg" class="absolute top-0 left-0 w-0 h-full bg-[#01172D] opacity-0">
+
+            <div id="chat-container" class="flex flex-col gap-24 w-full max-w-screen mx-2
+            min-h-screen justify-center items-center relative ">
+
+                <div id="1stking" class=" flex justify-start items-center gap-4 w-full">
+                    <img src="/download-removebg-preview (1).jpg" alt="" width="100px" height="100px"
+                        class="rounded-full  kp1">
+                    <div
+                        class="kt1 w-[450px] rounded-xl bg-[#f2fcf1] p-6 text-[#01172D] shadow-inner shadow-gray-800">
+                        Ah, what a beautiful kingdom you have, Your Majesty. So full of treasures… ripe for the taking.
+                    </div>
+                </div>
+
+                <div id="2ndking" class="flex justify-end items-center gap-4 w-full">
+                    <div
+                        class="kt2 w-[450px] rounded-xl bg-[#f2fcf1]  p-6 text-[#01172D] shadow-inner shadow-gray-800">
+                        Stay back, thief! This land thrives on the Habits of Harmony. As long as I remain consistent, you have no place here!
+                    </div>
+                    <img src="/download-removebg-preview (1).jpg" alt="" width="100px" height="100px"
+                        class="rounded-full kp2">
+                </div>
+
+                <div id="3rdking" class="flex justify-start items-center gap-4 w-full">
+                    <img src="/download-removebg-preview (1).jpg" alt="" width="100px" height="100px"
+                        class="  rounded-full kp3">
+                    <div
+                        class="kt3 w-[450px] rounded-xl bg-[#f2fcf1]  p-6 text-[#01172D] shadow-inner shadow-gray-800">
+                        "Ah, but consistency is tiring, isn't it? A single missed habit, and I slip past your gates. A few more, and your kingdom crumbles.
+                    </div>
+                </div> 
+                <div id="1stbtn" class="absolute bottom-6 right-0 bg-[#FF3723] width-[100px] height-[70px] text-white font-bold font-['roobert'] rounded-lg p-2 shadow-inner shadow-gray-800 mr-8">Defend Your Kingdom</div>
+            </div>
+        </div>
+        <div id="welcomeinfo" class="min-h-screen text-center text-[#F2FCF1] items-center ml-[270px] mr-[200px] mt-[40%]">
+            <span class="opacity-0 mr-2" id="weltext">WELCOME </span>
+            <span class="opacity-0 mr-2" id="weltext1">TO </span>
+            <span class="opacity-0 mr-2" id="weltext1">Habit </span>
+            <span class="opacity-0 mr-2" id="weltext1">Empire, </span>
+            <span class="opacity-0 mr-2" id="weltext1">Every </span>
+            <span class="opacity-0 mr-2" id="weltext1">Habit</span>
+            <span class="opacity-0 mr-2 " id="weltext1">Is </span>
+            <span class="opacity-0 mr-2" id="weltext1">Step </span>
+            <span class="opacity-0 mr-2 " id="weltext1">Toward </span>
+            <span class="opacity-0 mr-2 " id="weltext1">The </span>
+            <span class="opacity-0 mr-2 " id="weltext1">Crown. </span>
+        </div>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#welcome",
+                start: "top top",
+                end: "bottom top",
+                scrub: 2,
+                once: true,
+                pin: true
+            }
+        });
+    
+        tl.to("#welcomeinfo span", {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            stagger: 0.2 
+        });
+    
+       
+        tl.to("#blackbg", {
+            width: "100%",
+            opacity: 1,  
+            duration: 1.5,
+            ease: "power2.out"
+        });
+    
+        tl.from(".kp1", { opacity: 0, y: -30, duration: 1, ease: "bounce.out" })
+          .from(".kt1", { opacity: 0, y: -20, duration: 1 }) 
+          .from(".kp2", { opacity: 0, y: -30, duration: 1, ease: "bounce.out" })
+          .from(".kt2", { opacity: 0, y: -20, duration: 1 })
+          .from(".kp3", { opacity: 0, y: -30, duration: 1, ease: "bounce.out" })
+          .from(".kt3", { opacity: 0, y: -20, duration: 1 });
+    
+        ScrollTrigger.create({
+            trigger: "#blackbg",
+            start: "top top",
+            once: true
+        });
+    </script>
+    
+</body>
+
+</html>
